@@ -30,4 +30,10 @@
         android:visible="false"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_action_more"
+        android:title="@string/nav_setting"
+        app:showAsAction="always" />
+
 </menu>
