@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="40dp"
-    android:background="@drawable/selector_chip_round"
+    android:background="@drawable/selector_text"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:gravity="center_vertical"
@@ -18,7 +17,8 @@
         android:ellipsize="marquee"
         android:gravity="center"
         android:singleLine="true"
-        android:textColor="@color/text"
+        android:duplicateParentState="true"
+        android:textColor="@color/selector_func_color"
         android:textSize="18sp"
         tools:text="泥巴" />
 
@@ -27,10 +27,11 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="12dp"
+        android:duplicateParentState="true"
+        android:buttonTint="@color/selector_func_color"
         android:clickable="false"
         android:enabled="false"
         android:focusable="false"
-        android:focusableInTouchMode="false"
-        app:buttonTint="@color/white" />
+        android:focusableInTouchMode="false" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

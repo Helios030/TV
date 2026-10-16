@@ -89,6 +89,11 @@ public class CustomWallView extends FrameLayout implements DefaultLifecycleObser
     }
 
     private void load() {
+        if (!Setting.isImageBackground()) {
+            binding.image.setImageDrawable(null);
+            binding.image.setBackgroundColor(0xFF000000);
+            return;
+        }
         int wall = Setting.getWall();
         int type = Setting.getWallType();
         if (isBuiltIn(wall, type)) loadRes(WALL_PAPERS[wall]);

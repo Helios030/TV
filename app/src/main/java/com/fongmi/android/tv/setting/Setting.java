@@ -59,6 +59,14 @@ public class Setting {
         Prefers.put("wall", Math.clamp(wall, MIN_WALL, MAX_WALL));
     }
 
+    public static boolean isImageBackground() {
+        return Prefers.getBoolean("image_background", true);
+    }
+
+    public static void putImageBackground(boolean imageBackground) {
+        Prefers.put("image_background", imageBackground);
+    }
+
     public static int getWallType() {
         return Math.clamp(Prefers.getInt("wall_type", 0), MIN_WALL_TYPE, MAX_WALL_TYPE);
     }

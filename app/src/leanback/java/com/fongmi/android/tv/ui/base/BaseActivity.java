@@ -4,6 +4,8 @@ import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +43,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     public void setContentView(View view) {
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLACK));
         super.setContentView(view);
         if (!customWall()) return;
         ((ViewGroup) findViewById(android.R.id.content)).addView(new CustomWallView(this, null), 0, new ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT));
