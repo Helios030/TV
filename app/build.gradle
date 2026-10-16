@@ -6,8 +6,9 @@ plugins {
 }
 
 def localProps = new Properties()
-rootProject.file('local.properties').withInputStream {
-    localProps.load(it)
+def localPropsFile = rootProject.file('local.properties')
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { localProps.load(it) }
 }
 
 android {
@@ -46,10 +47,12 @@ android {
 
     signingConfigs {
         release {
-            storeFile file(localProps['storeFile'])
-            keyAlias localProps['keyAlias']
-            keyPassword localProps['storePassword']
-            storePassword localProps['storePassword']
+            if (localProps['storeFile']) {
+                storeFile file(localProps['storeFile'])
+                keyAlias localProps['keyAlias']
+                keyPassword localProps['storePassword']
+                storePassword localProps['storePassword']
+            }
         }
     }
 
@@ -122,4 +125,11 @@ dependencies {
     annotationProcessor libs.eventbus.annotation.processor
     annotationProcessor libs.glide.compiler
     coreLibraryDesugaring libs.desugar
+
+    implementation project(':hook')
+    implementation project(':forcetech')
+    implementation project(':jianpian')
+    implementation project(':thunder')
+    implementation project(':tvbus')
+    implementation project(':zlive')
 }
