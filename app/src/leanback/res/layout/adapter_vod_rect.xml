@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:background="@drawable/shape_vod_list"
+    android:clipToOutline="true"
     android:foreground="@drawable/selector_vod">
 
     <com.google.android.material.imageview.ShapeableImageView

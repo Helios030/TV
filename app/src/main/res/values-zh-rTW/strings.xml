@@ -428,4 +428,23 @@
         <item>選擇字幕</item>
     </string-array>
 
+<string name="play_loop">循環</string>
+    <string name="play_title">章節</string>
+    <string name="setting_image_background">圖片背景</string>
+    <string name="player_caption">字幕樣式</string>
+    <string name="player_danmaku_load">彈幕載入</string>
+    <string name="player_speed">長按倍速</string>
+    <string name="dialog_select_title">選擇章節</string>
+    <string-array name="select_theme">
+        <item>預設</item>
+        <item>紅色</item>
+        <item>綠色</item>
+        <item>金色</item>
+        <item>橙色</item>
+        <item>紫色</item>
+    </string-array>
+
+
+    <string name="setting_theme">主題樣式</string>
+
 </resources>

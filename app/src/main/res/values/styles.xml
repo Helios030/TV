@@ -5,8 +5,7 @@
     </style>
 
     <style name="Vod.Grid">
-        <item name="cornerSizeTopLeft">8dp</item>
-        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSize">8dp</item>
     </style>
 
     <style name="Vod.Grid.Large">
@@ -25,12 +24,12 @@
 
     <style name="Player">
         <item name="resize_mode">fit</item>
-        <item name="use_artwork">true</item>
+        <item name="use_artwork">false</item>
         <item name="use_controller">false</item>
     </style>
 
     <style name="Player.Vod">
-        <item name="keep_content_on_player_reset">false</item>
+        <item name="keep_content_on_player_reset">true</item>
     </style>
 
     <style name="Player.Live">

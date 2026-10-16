@@ -26,4 +26,9 @@
     <color name="white_80">#CCFFFFFF</color>
     <color name="white_90">#E6FFFFFF</color>
 
+<color name="theme_red">#E53935</color>
+<color name="theme_green">#43A047</color>
+<color name="theme_gold">#FFB300</color>
+<color name="theme_orange">#F4511E</color>
+<color name="theme_purple">#8E24AA</color>
 </resources>

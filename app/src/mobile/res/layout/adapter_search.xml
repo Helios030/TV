@@ -6,6 +6,7 @@
     android:layout_height="128dp"
     android:layout_margin="8dp"
     android:background="@drawable/shape_vod_list"
+    android:clipToOutline="true"
     android:foreground="@drawable/shape_vod">
 
     <com.google.android.material.imageview.ShapeableImageView

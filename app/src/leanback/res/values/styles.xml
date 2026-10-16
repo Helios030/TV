@@ -1,24 +1,27 @@
 <resources>
 
-    <style name="Theme.Base" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
+    <style name="Theme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowAnimationStyle">@style/NoAnim</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog</item>
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialog</item>
     </style>
 
     <style name="Theme.Splash" parent="Theme.SplashScreen">
         <item name="postSplashScreenTheme">@style/Theme.App</item>
-        <item name="windowSplashScreenBackground">#141218</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
     </style>
 
     <style name="Theme.App" parent="Theme.Base" />
 
     <style name="Theme.Crash" parent="Theme.Base">
-        <item name="android:windowBackground">@color/grey_800</item>
         <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@color/grey_700</item>
     </style>
 
     <style name="NoAnim">
@@ -38,12 +41,57 @@
     <style name="Control">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/selector_chip</item>
+        <item name="android:background">@drawable/selector_text</item>
         <item name="android:focusable">true</item>
         <item name="android:focusableInTouchMode">true</item>
-        <item name="android:nextFocusUp">@id/exo_progress</item>
+        <item name="android:nextFocusDown">@id/timeBar</item>
         <item name="android:textColor">@color/text</item>
         <item name="android:textSize">14sp</item>
     </style>
 
+<style name="Theme.App.Red" parent="Theme.App">
+        <item name="colorAccent">@color/theme_red</item>
+    </style>
+<style name="Theme.App.Green" parent="Theme.App">
+        <item name="colorAccent">@color/theme_green</item>
+    </style>
+<style name="Theme.App.Gold" parent="Theme.App">
+        <item name="colorAccent">@color/theme_gold</item>
+    </style>
+<style name="Theme.App.Orange" parent="Theme.App">
+        <item name="colorAccent">@color/theme_orange</item>
+    </style>
+<style name="Theme.App.Purple" parent="Theme.App">
+        <item name="colorAccent">@color/theme_purple</item>
+    </style>
+<style name="BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+<style name="ModalBottomSheetDialog" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_bottom_sheet</item>
+    </style>
+<style name="MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/dialog_background</item>
+        <item name="backgroundTint">@color/dialog_background</item>
+        <item name="android:windowBackground">@drawable/shape_dialog</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Dialog</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white_70</item>
+        <item name="colorControlNormal">@color/white_70</item>
+        <item name="colorControlActivated">@color/gold</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/DialogButton</item>
+    </style>
+<style name="DialogButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/selector_func_color</item>
+    </style>
+<style name="ShapeAppearance.App.Dialog" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">10dp</item>
+    </style>
 </resources>

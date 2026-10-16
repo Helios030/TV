@@ -136,6 +136,7 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="center"
+            android:visibility="gone"
             android:src="@drawable/ic_control_danmaku_on" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

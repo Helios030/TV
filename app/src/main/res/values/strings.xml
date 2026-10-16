@@ -438,4 +438,23 @@
         <item>Select subtitle track</item>
     </string-array>
 
+<string name="play_loop">Loop</string>
+    <string name="play_title">Chapter</string>
+    <string name="setting_image_background">Image background</string>
+    <string name="player_caption">Caption style</string>
+    <string name="player_danmaku_load">Danmaku load</string>
+    <string name="player_speed">Press speed</string>
+    <string name="dialog_select_title">Select chapter</string>
+    <string-array name="select_theme">
+        <item>Default</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Gold</item>
+        <item>Orange</item>
+        <item>Purple</item>
+    </string-array>
+
+
+    <string name="setting_theme">Theme</string>
+
 </resources>
