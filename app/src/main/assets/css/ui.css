@@ -293,8 +293,8 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--md-surface-container-high);
-    border-radius: 28px;
+    background: #383A46;
+    border-radius: 10px;
     width: calc(100% - 48px);
     max-width: 312px;
     overflow: hidden;
@@ -461,4 +461,3 @@ html, body {
 }
 
 @keyframes md-spin { to { transform: rotate(360deg); } }
-

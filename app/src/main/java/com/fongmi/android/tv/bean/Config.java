@@ -93,18 +93,24 @@ public class Config {
     }
 
     public static Config vod() {
-        Config item = AppDatabase.get().getConfigDao().findOne(0);
+        Config item = current(0);
         return item == null ? create(0, DEFAULT_VOD_URL) : item;
     }
 
     public static Config live() {
-        Config item = AppDatabase.get().getConfigDao().findOne(1);
+        Config item = current(1);
         return item == null ? create(1) : item;
     }
 
     public static Config wall() {
-        Config item = AppDatabase.get().getConfigDao().findOne(2);
+        Config item = current(2);
         return item == null ? create(2) : item;
+    }
+
+    private static Config current(int type) {
+        String url = Prefers.getString("config_" + type);
+        if (!TextUtils.isEmpty(url)) return find(url, type);
+        return AppDatabase.get().getConfigDao().findOne(type);
     }
 
     public static Config find(int id) {

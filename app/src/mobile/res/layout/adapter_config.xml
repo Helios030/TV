@@ -15,10 +15,9 @@
         android:layout_weight="1"
         android:ellipsize="middle"
         android:singleLine="true"
-        android:textColor="?attr/colorOnSurface"
+        android:textColor="@color/site_dialog_text"
         android:textSize="14sp"
-        app:backgroundTint="@color/selector_button"
-        app:strokeColor="@color/selector_stroke"
+        app:strokeColor="@color/site_dialog_text"
         tools:text="https://fongmi.github.io/cat.json" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -27,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_setting_delete" />
+        android:src="@drawable/ic_setting_delete"
+        app:tint="@color/white" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
