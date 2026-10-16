@@ -130,10 +130,4 @@ dependencies {
     annotationProcessor libs.glide.compiler
     coreLibraryDesugaring libs.desugar
 
-    implementation project(':hook')
-    implementation project(':forcetech')
-    implementation project(':jianpian')
-    implementation project(':thunder')
-    implementation project(':tvbus')
-    implementation project(':zlive')
 }
