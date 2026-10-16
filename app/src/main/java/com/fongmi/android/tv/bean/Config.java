@@ -52,6 +52,8 @@ public class Config {
     @SerializedName("assrt")
     private String assrt;
 
+    private static final String DEFAULT_VOD_URL = "https://raw.githubusercontent.com/qist/tvbox/master/fty.json";
+
     public static List<Config> arrayFrom(String str) {
         Type listType = TypeToken.getParameterized(List.class, Config.class).getType();
         List<Config> items = App.gson().fromJson(str, listType);
@@ -92,7 +94,7 @@ public class Config {
 
     public static Config vod() {
         Config item = AppDatabase.get().getConfigDao().findOne(0);
-        return item == null ? create(0) : item;
+        return item == null ? create(0, DEFAULT_VOD_URL) : item;
     }
 
     public static Config live() {
